@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="https://th.bing.com/th/id/R.0b143eb6cf044a01cc98b29d27084b6f?rik=NTHCNWD7QzyCIQ&riu=http%3a%2f%2fhkhill.files.wordpress.com%2f2010%2f06%2fsticky-notes1.jpg&ehk=n%2fkmNY5XLWEkFHNoljKv810pvLxdAqHVk09ZLDhgaT4%3d&risl=&pid=ImgRaw&r=0" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,700&family=Turret+Road:wght@700&display=swap" rel="stylesheet">
+
+    <script src="./javascript/dark.js" defer></script>
+    <script src="./javascript/script.js" defer></script>
+
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/dark.css">
+
+    <title>Notes</title>
+</head>
+<body>
+    <div class="popup-box">
+        <div class="popup">
+            <div class="content">
+                <header>
+                    <p>Add A New Note</p>
+                    <i id="close" class="bi bi-x"></i>
+                </header>
+                <form action="#">
+                    <div class="row title">
+                        <label>Title</label>
+                        <input type="text">
+                    </div>
+                    <div class="row description">
+                        <label>Description</label>
+                        <textarea></textarea>
+                    </div>
+                    <button>Add Note</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="dark-theme">
+        <button class="dark">
+            <span>Change Theme</span>
+            <i class="bi bi-brightness-high-fill"></i>
+        </button>
+    </div>
+    <div class="wrapper">
+        <li class="add-box">
+            <div class="icon"><i id="open" class="bi bi-plus-circle-dotted"></i></div>
+            <p>Add New Note</p>
+        </li>
+        <li class="note">
+            <div class="details">
+                <p>This is a title</p>
+                <span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam, corporis.</span>
+            </div>
+            <div class="bottom-content">
+                <span>April 3, 2022</span>
+                <div class="settings">
+                    <i class="bi bi-three-dots"></i>
+                    <ul class="menu">
+                        <li><i class="bi bi-pen"></i>Edit</li>
+                        <li><i class="bi bi-trash"></i>Delete</li>
+                    </ul>
+                </div>
+            </div>
+        </li>
+    </div>
+    
+</body>
+</html>

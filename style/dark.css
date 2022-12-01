@@ -1,0 +1,55 @@
+body.dark-mode{
+    background-image: url("../images/dark.jpg");
+}
+
+body.dark-mode .wrapper li{
+    background-color: black;
+}
+
+body.dark-mode .dark, body.dark-mode .bi-brightness-high-fill, body.dark-mode .add-box, body.dark-mode .bottom-content, body.dark-mode .settings, body.dark-mode .content header i{
+    background-color: black;
+    color: orange;
+    
+}
+
+body.dark-mode .note, body.dark-mode .content form textarea, body.dark-mode .content form, body.dark-mode form input, body.dark-mode .content header p{
+    color: aliceblue;
+}
+
+body.dark-mode .bottom-content{
+    border-top: 1px solid orange;
+}
+
+body.dark-mode .menu li{
+    color: aliceblue;
+}
+
+body.dark-mode .menu li:hover{
+    background-color: gray;
+}
+
+body.dark-mode .menu li:nth-last-child(1){
+    border-top: 1px solid aliceblue;
+}
+
+body.dark-mode .popup .content{
+    background-color: black;
+}
+
+body.dark-mode .content header{
+    border-bottom: 1px solid orange;
+}
+
+body.dark-mode .content form :where(input, textarea){
+    border: 1px solid orange;
+    background-color: black;
+}
+
+body.dark-mode .content button{
+    background-color: orange;
+}
+
+body.dark-mode .content button:hover{
+    background-color: rgba(255, 166, 0, 0.548);
+    box-shadow: 3px 3px 20px rgba(59, 59, 59, 0.801);
+}
