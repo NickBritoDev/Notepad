@@ -1,5 +1,5 @@
 body.dark-mode{
-    background-image: url("../images/dark.jpg");
+    background-image: url("https://wallpaperaccess.com/full/26371.jpg");
 }
 
 body.dark-mode .wrapper li{
@@ -8,7 +8,7 @@ body.dark-mode .wrapper li{
 
 body.dark-mode .dark, body.dark-mode .bi-brightness-high-fill, body.dark-mode .add-box, body.dark-mode .bottom-content, body.dark-mode .settings, body.dark-mode .content header i{
     background-color: black;
-    color: orange;
+    color: purple;
     
 }
 
@@ -17,7 +17,7 @@ body.dark-mode .note, body.dark-mode .content form textarea, body.dark-mode .con
 }
 
 body.dark-mode .bottom-content{
-    border-top: 1px solid orange;
+    border-top: 1px solid purple;
 }
 
 body.dark-mode .menu li{
@@ -37,19 +37,37 @@ body.dark-mode .popup .content{
 }
 
 body.dark-mode .content header{
-    border-bottom: 1px solid orange;
+    border-bottom: 1px solid purple;
 }
 
 body.dark-mode .content form :where(input, textarea){
-    border: 1px solid orange;
+    border: 1px solid purple;
     background-color: black;
 }
 
 body.dark-mode .content button{
-    background-color: orange;
+    background-color: purple;
 }
 
 body.dark-mode .content button:hover{
-    background-color: rgba(255, 166, 0, 0.548);
+    background-color:rgba(128, 0, 128, 0.699);
     box-shadow: 3px 3px 20px rgba(59, 59, 59, 0.801);
+}
+
+body.dark-mode::-webkit-scrollbar {
+    width: 10px;
+}
+  
+  
+body.dark-mode ::-webkit-scrollbar-track {
+    background: #141414;
+}
+  
+
+body.dark-mode ::-webkit-scrollbar-thumb {
+    background:purple;
+ }
+
+body.dark-mode ::-webkit-scrollbar-thumb:hover {
+    background: gray;
 }
