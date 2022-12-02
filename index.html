@@ -32,13 +32,13 @@
                 <form action="#">
                     <div class="row title">
                         <label>Title</label>
-                        <input type="text">
+                        <input maxlength="100" type="text">
                     </div>
                     <div class="row description">
                         <label>Description</label>
-                        <textarea></textarea>
+                        <textarea maxlength="500" cols="30" rows="10"></textarea>
                     </div>
-                    <button>Add Note</button>
+                    <button class="add-btn">Add Note</button>
                 </form>
             </div>
         </div>
@@ -51,10 +51,10 @@
     </div>
     <div class="wrapper">
         <li class="add-box">
-            <div class="icon"><i id="open" class="bi bi-plus-circle-dotted"></i></div>
+            <div class="icon"><i id="open" class="bi bi-stickies"></i></div>
             <p>Add New Note</p>
         </li>
     </div>
-    
+  
 </body>
 </html>

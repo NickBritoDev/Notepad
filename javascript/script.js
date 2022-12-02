@@ -2,6 +2,7 @@ const popupBox = document.querySelector('.popup-box')
 const closePopupBox = document.querySelector('#close')
 const openPopup = document.querySelector('#open')
 const addNote = popupBox.querySelector('button')
+const popupTitle = popupBox.querySelector('header p')
 const title = popupBox.querySelector('input')
 const description = popupBox.querySelector('textarea')
 const addBox = document.querySelector('.add-box')
@@ -9,8 +10,14 @@ const addBox = document.querySelector('.add-box')
 const months = ["jan", "fev", "mar", "abr", "mai", "jun", "jul", "ago", "set", "out", "nov", "dez"]
 
 const notes = JSON.parse(localStorage.getItem("notes") || "[]")
+let isUpdate = false, updateID
 
 closePopupBox.addEventListener("click", (popupBox) => {
+    isUpdate = false
+    title.value = ""
+    description.value = ""
+    addNote.innerText = " Add Note"
+    popupTitle.innerText = "Add A New Note"
     document.querySelector('.popup-box').style.display = "none"
 })
 
@@ -34,7 +41,13 @@ addNote.addEventListener("click", e => {
             date: ` ${day} ${month} de ${year}`
         }
 
-        notes.push(noteInfo)
+        if(!isUpdate){
+            notes.push(noteInfo)
+        } else {
+            isUpdate = false
+            notes[updateID] = noteInfo
+        }
+
         localStorage.setItem("notes", JSON.stringify(notes))
         closePopupBox.click()
         showNotes()
@@ -42,7 +55,8 @@ addNote.addEventListener("click", e => {
 })
 
 function showNotes(){
-    notes.forEach((note) => {
+    document.querySelectorAll(".note").forEach(note => note.remove())
+    notes.forEach((note, index) => {
         let liTag = `<li class="note">
                             <div class="details">
                                 <p>${note.title}</p>
@@ -51,10 +65,9 @@ function showNotes(){
                             <div class="bottom-content">
                                 <span>${note.date}</span>
                                 <div class="settings">
-                                    <i class="bi bi-three-dots"></i>
                                     <ul class="menu">
-                                        <li><i class="bi bi-pen"></i>Edit</li>
-                                        <li><i class="bi bi-trash"></i>Delete</li>
+                                        <li><i onclick="updateNote(${index}, '${note.title}', '${note.description}')" class="bi bi-pen"></i></li>
+                                        <li><i onclick="deleteNote(${index})" class="bi bi-trash"></i></li>
                                     </ul>
                                 </div>
                             </div>
@@ -63,3 +76,19 @@ function showNotes(){
     } )
 }
 showNotes()
+
+function deleteNote(noteID){
+    notes.splice(noteID, 1)
+    localStorage.setItem("notes", JSON.stringify(notes))
+    showNotes()
+}
+
+function updateNote(noteID, tit, desc){
+    updateID = noteID
+    isUpdate = true
+    openPopup.click()
+    title.value = tit;
+    description.value = desc;
+    addNote.innerText = "Update A Note"
+    popupTitle.innerText = "Update A Note"
+}

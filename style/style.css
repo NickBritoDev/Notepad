@@ -34,8 +34,8 @@ body{
     background-repeat: no-repeat;
     background-position:unset;
     width: 100%;
-    overflow: hidden;
     height: 100vh;
+    overflow-x: hidden;
 }
 
 @-webkit-keyframes scale-up-center {
@@ -95,13 +95,13 @@ body{
 }
 
 .wrapper li {
-    height: 250px;
     background-color: aliceblue;
     border-radius: 10px;
     padding: 15px 20px;
 }
 
 .add-box{
+    height: 250px;
     color: rgb(129, 188, 243);
     font-family: 'Turret Road', cursive;
 }
@@ -139,6 +139,10 @@ body{
     font-size: 1rem;
 }
 
+.note span {
+    line-break: anywhere;
+}
+
 .bottom-content{
     border-top: 1px solid rgba(129, 188, 243, 0.5);
     padding-top: 4px;
@@ -152,45 +156,50 @@ body{
     font-size: .8rem;
 }
 
-.settings{
-    margin: 7px 0 0 0 ;
-    color: rgb(129, 188, 243);
-    cursor: pointer;
-    position: relative;
-}
-
-.settings:hover .menu{
-    transform: scale(1);
-}
-
 .menu{
-    position: absolute;
-    right: -10px;
-    bottom: 0;
-    box-shadow: 0 0 6px black;
-    border-radius: 6px;
-    transform: scale(0);
-    transform-origin: bottom right;
-    transition: transform 0.2s ease;
+    display: flex;
+    cursor: pointer;
 }
 
 .menu li{
-    justify-content: space-between;
     align-items: center;
     display: flex;
     height: 25px;
-    justify-content: flex-start;
-    border-radius: 0px;
     color:black;
-    gap: 5px;
+    margin: 5px auto 0 auto 0;
+    background-color: transparent;
+    outline: none;
 }
 
-.menu li:hover{
-    background-color: gainsboro;
+.bi-pen, .bi-trash{
+    margin-right:-35px;
+    margin-top: 10px;
+    border-radius: 6px;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
 }
 
-.menu li:nth-last-child(1){
-    border-top: 1px solid black;
+.bi-trash{
+    background-color: red;
+    color: aliceblue;
+    margin-left: -10px;
+}
+
+.bi-pen{
+    background-color: rgb(129, 188, 243);
+    color: aliceblue;
+}
+
+.bi-pen:hover{
+    background-color: rgba(14, 76, 134, 0.664);
+}
+
+.bi-trash:hover{
+    background-color: rgba(110, 15, 15, 0.74);
 }
 
 .popup-box{

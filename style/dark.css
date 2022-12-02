@@ -24,13 +24,6 @@ body.dark-mode .menu li{
     color: aliceblue;
 }
 
-body.dark-mode .menu li:hover{
-    background-color: gray;
-}
-
-body.dark-mode .menu li:nth-last-child(1){
-    border-top: 1px solid aliceblue;
-}
 
 body.dark-mode .popup .content{
     background-color: black;
@@ -54,7 +47,7 @@ body.dark-mode .content button:hover{
     box-shadow: 3px 3px 20px rgba(59, 59, 59, 0.801);
 }
 
-body.dark-mode::-webkit-scrollbar {
+body.dark-mode ::-webkit-scrollbar {
     width: 10px;
 }
   
@@ -69,5 +62,23 @@ body.dark-mode ::-webkit-scrollbar-thumb {
  }
 
 body.dark-mode ::-webkit-scrollbar-thumb:hover {
+    background: gray;
+}
+
+body.dark-mode::-webkit-scrollbar {
+    width: 10px;
+}
+  
+  
+body.dark-mode::-webkit-scrollbar-track {
+    background: #141414;
+}
+  
+
+body.dark-mode::-webkit-scrollbar-thumb {
+    background:purple;
+ }
+
+body.dark-mode::-webkit-scrollbar-thumb:hover {
     background: gray;
 }
